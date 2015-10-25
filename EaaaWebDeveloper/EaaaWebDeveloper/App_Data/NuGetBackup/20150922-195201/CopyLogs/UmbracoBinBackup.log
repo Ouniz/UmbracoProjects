@@ -1,0 +1,73 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Tuesday, September 22, 2015 7:52:01 PM
+   Source : c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\
+     Dest : c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\App_Data\NuGetBackup\20150922-195201\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  43	c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\
+	    New File  		  144384	AutoMapper.dll  0%   90%  100%  
+	    New File  		   28160	AutoMapper.Net4.dll  0%  100%  
+	    New File  		  118784	businesslogic.dll  0%  100%  
+	    New File  		  146432	ClientDependency.Core.dll  0%   89%  100%  
+	    New File  		   23552	ClientDependency.Core.Mvc.dll  0%  100%  
+	    New File  		  516096	cms.dll  0%   25%   50%   76%  100%  
+	    New File  		   52224	controls.dll  0%  100%  
+	    New File  		  122880	CookComputing.XmlRpcV2.dll  0%  100%  
+	    New File  		   95744	Examine.dll  0%  100%  
+	    New File  		  134656	HtmlAgilityPack.dll  0%   97%  100%  
+	    New File  		  200704	ICSharpCode.SharpZipLib.dll  0%   65%  100%  
+	    New File  		  100352	ImageProcessor.dll  0%  100%  
+	    New File  		   47104	ImageProcessor.Web.dll  0%  100%  
+	    New File  		   24576	interfaces.dll  0%  100%  
+	    New File  		  258048	log4net.dll  0%   50%  100%  
+	    New File  		  786432	Lucene.Net.dll  0%   33%   66%  100%  
+	    New File  		   11264	Microsoft.ApplicationBlocks.Data.dll  0%  100%  
+	    New File  		   29344	Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll  0%  100%  
+	    New File  		    1805	Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml  0%  100%  
+	    New File  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    New File  		  396288	MiniProfiler.dll  0%   33%   66%   99%  100%  
+	    New File  		  457216	MySql.Data.dll  0%   28%   57%   86%  100%  
+	    New File  		  504832	Newtonsoft.Json.dll  0%   25%   51%   77%  100%  
+	    New File  		   19968	SQLCE4Umbraco.dll  0%  100%  
+	    New File  		  185544	System.Net.Http.Formatting.dll  0%   70%  100%  
+	    New File  		  139976	System.Web.Helpers.dll  0%   93%  100%  
+	    New File  		  471240	System.Web.Http.dll  0%   27%   55%   83%  100%  
+	    New File  		   82120	System.Web.Http.WebHost.dll  0%  100%  
+	    New File  		  566472	System.Web.Mvc.dll  0%   46%   92%  100%  
+	    New File  		  272072	System.Web.Razor.dll  0%   48%   96%  100%  
+	    New File  		   41672	System.Web.Webpages.Deployment.dll  0%  100%  
+	    New File  		  211656	System.Web.Webpages.dll  0%   61%  100%  
+	    New File  		   39624	System.Web.Webpages.Razor.dll  0%  100%  
+	    New File  		  192512	TidyNet.dll  0%   68%  100%  
+	    New File  		   2.0 m	Umbraco.Core.dll  0%   24%   48%   73%   97%  100%  
+	    New File  		   38400	umbraco.DataLayer.dll  0%  100%  
+	    New File  		   1.8 m	umbraco.dll  0%   13%   26%   39%   53%   66%   79%   92%  100%  
+	    New File  		  372736	umbraco.editorControls.dll  0%   35%   70%  100%  
+	    New File  		  131584	umbraco.MacroEngines.dll  0%   99%  100%  
+	    New File  		   38400	umbraco.providers.dll  0%  100%  
+	    New File  		   61440	Umbraco.Web.UI.dll  0%  100%  
+	    New File  		   50176	UmbracoExamine.dll  0%  100%  
+	    New File  		   22528	UrlRewritingNet.UrlRewriter.dll  0%  100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :        43        43         0         0         0         0
+   Bytes :   10.77 m   10.77 m         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :            53063046 Bytes/sec.
+   Speed :            3036.291 MegaBytes/min.
+   Ended : Tuesday, September 22, 2015 7:52:01 PM
+
