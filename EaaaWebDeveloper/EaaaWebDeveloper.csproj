@@ -3111,6 +3111,7 @@
     <Content Include="Views\MacroPartials\MainMenu.cshtml" />
     <Content Include="Views\MacroPartials\Plogin.cshtml" />
     <Content Include="Views\Contact.cshtml" />
+    <Content Include="Views\MacroPartials\Logout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

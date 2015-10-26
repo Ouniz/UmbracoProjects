@@ -6,9 +6,16 @@
     color:white;
 }
 
+.Plogout-Form-adjust {
+    padding: 15px 10px 0px 0px;
+    color: white;
+}
+
+.Login-Button{
+    margin:10px 10px 0px 0px;
+}
+
 content{
     position: absolute;
     top: 50px;
 }
-
-

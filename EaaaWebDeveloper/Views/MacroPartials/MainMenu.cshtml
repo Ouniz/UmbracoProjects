@@ -1,5 +1,8 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
 
+@using System.Web.Mvc.Html
+@using ClientDependency.Core.Mvc
+
 @{
     Layout = null;
     // Used to get Level 2 children
@@ -10,6 +13,8 @@
     //Else
     var srOnly = "<span class='sr - only'></span>";
     //
+
+
 }
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -29,13 +34,16 @@
             <ul class="nav navbar-nav">
                 @foreach (var menuItem in root.Children.Where("Visible"))
                 {
-
+                    var isProtected = umbraco.library.IsProtected(menuItem.id, menuItem.path);
+                    var loginAccess = umbraco.library.IsProtected(menuItem.id, menuItem.path) && umbraco.library.HasAccess(menuItem.id, menuItem.path);
+                    if (!isProtected || loginAccess)
+                    {
                     <li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active" : null)  @(menuItem.Children.Where("Visible").Count() > 0 ? "dropdown" : null)">
                         <a href="   @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? "#" : @menuItem.Url)" 
                                     @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? dropdownData : null)>
                                     @menuItem.Name @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? Html.Raw(caret) : Html.Raw(srOnly))</a>
                         
-                        @if(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown"))
+                        @if (menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown"))
                         {
                             <ul class="dropdown-menu">
                                 @foreach (var menuItem2 in menuItem.Children.Where("Visible"))
@@ -45,17 +53,29 @@
                             </ul>
                         }
                     </li>
+                    }
+
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">Register</a>
-                </li>
-                <li>
-                    <div class="Plogin-Form-adjust">
-                        @Umbraco.RenderMacro("Plogin")
-                    </div>
-                </li>
+                @Html.RenderJsHere()
+                @if (!Members.GetCurrentLoginStatus().IsLoggedIn)
+                {
+                    <li>
+                        <a href="#">Register</a>
+                    </li>
+                    <li>
+                        <div class="Plogin-Form-adjust">
+                            @Html.Partial("Plogin")
+                        </div>
+                    </li>
+                }
+                else { 
+
+                @Html.Partial("Logout")
+
+                }
+                
             </ul>
         </div>
     </div>
