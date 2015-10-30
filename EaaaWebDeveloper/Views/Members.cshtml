@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web.Mvc.Html
+@using ClientDependency.Core.Mvc
+@using Umbraco.Web
+@using Umbraco.Web.Controllers
+@using Umbraco.Core
+@using Umbraco.Core.Services;
+@using Umbraco.Core.Persistence;
+@using Umbraco.Core.Models;
+
+
+@{
+    Layout = "Master.cshtml";
+    //var members = umbraco.cms.businesslogic.member.Member.GetAll;
+
+    var memberservice = ApplicationContext.Current.Services.MemberService;
+
+
+}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(var mem in memberservice.GetAllMembers().OrderBy(x => x.ContentTypeAlias))
+            {
+                <tr>
+                    <th scope="row">@mem.Id</th>
+                    <td>@mem.Name</td>
+                    <td>@mem.Email</td>
+                    <td>@mem.ContentTypeAlias</td>
+                </tr>
+            }
+                
+    </tbody>
+</table>

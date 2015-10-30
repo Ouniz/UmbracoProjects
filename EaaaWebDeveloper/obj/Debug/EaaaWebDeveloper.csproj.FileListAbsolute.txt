@@ -59,3 +59,10 @@ c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDe
 c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\obj\Debug\EaaaWebDeveloper.csprojResolveAssemblyReference.cache
 c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\obj\Debug\EaaaWebDeveloper.dll
 c:\users\ronnie\documents\visual studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\obj\Debug\EaaaWebDeveloper.pdb
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\System.Web.Mvc.Extensions.dll
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\System.Web.Mvc.Extensions.xml
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\Microsoft.Web.Helpers.dll
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\WebMatrix.Data.dll
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\WebMatrix.WebData.dll
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\WebMatrix.Data.xml
+C:\Users\Ronnie\Documents\Visual Studio 2015\Projects\EaaaWebDeveloper\EaaaWebDeveloper\bin\WebMatrix.WebData.xml

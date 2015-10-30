@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@{ 
+    var selection = CurrentPage.Children.Where("Visible");
+}
+    
+@if (selection.Any())
+{
+    
+        foreach (var item in selection)
+        {
+        <div class="col-md-4">
+            <div style="background: url(@item.pageImage) no-repeat center center; height:200px;" class="img-thumbnail col-md-12"></div>
+            <div><a href="@item.Url">@item.Name</a></div>
+        </div>
+        }
+}

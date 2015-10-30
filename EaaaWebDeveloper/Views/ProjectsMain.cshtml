@@ -2,3 +2,17 @@
 @{
     Layout = "Master.cshtml";
 }
+<div class="container">
+    @{
+
+        foreach (var item in CurrentPage.Children.Where("Visible"))
+        {
+            
+            <div><h1>@item.PageTitle</h1></div>
+            <div><p>@item.PageContent</p></div>
+            <div><img src="@item.PageImage" /></div>
+
+        }
+
+    }
+</div>

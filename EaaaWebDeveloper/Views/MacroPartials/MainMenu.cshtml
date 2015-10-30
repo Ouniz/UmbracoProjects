@@ -1,5 +1,9 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
 
+
+@using Umbraco.Web
+@using Umbraco.Web.Models
+@using Umbraco.Web.Controllers
 @using System.Web.Mvc.Html
 @using ClientDependency.Core.Mvc
 
@@ -28,7 +32,7 @@
             </button>
             <a class="navbar-brand" href="@root.Url">@root.Name</a>
         </div>
-
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -39,9 +43,10 @@
                     if (!isProtected || loginAccess)
                     {
                     <li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active" : null)  @(menuItem.Children.Where("Visible").Count() > 0 ? "dropdown" : null)">
-                        <a href="   @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? "#" : @menuItem.Url)" 
-                                    @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? dropdownData : null)>
-                                    @menuItem.Name @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? Html.Raw(caret) : Html.Raw(srOnly))</a>
+
+                        <a href="@(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? "#" : @menuItem.Url)" @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? dropdownData : null)>
+                            @menuItem.Name @(menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown") ? Html.Raw(caret) : Html.Raw(srOnly))
+                        </a>
                         
                         @if (menuItem.Children.Where("Visible").Count() > 0 && menuItem.Where("DisplayDropdown"))
                         {
@@ -58,22 +63,20 @@
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                @Html.RenderJsHere()
-                @if (!Members.GetCurrentLoginStatus().IsLoggedIn)
+                @if (Members.GetCurrentLoginStatus().IsLoggedIn)
+                {
+                    @Html.Partial("Logout")
+                }
+                else
                 {
                     <li>
-                        <a href="#">Register</a>
+                        <a href="/register">Register</a>
                     </li>
                     <li>
                         <div class="Plogin-Form-adjust">
                             @Html.Partial("Plogin")
                         </div>
                     </li>
-                }
-                else { 
-
-                @Html.Partial("Logout")
-
                 }
                 
             </ul>

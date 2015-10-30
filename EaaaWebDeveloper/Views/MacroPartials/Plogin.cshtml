@@ -11,18 +11,9 @@
     Layout = null;
     var loginModel = new LoginModel();
 
-    Html.EnableClientValidation();
-    Html.EnableUnobtrusiveJavaScript();
-    Html.RequiresJs("/umbraco_client/ui/jquery.js");
-    Html.RequiresJs("/umbraco_client/Application/JQuery/jquery.validate.mins.js");
-    Html.RequiresJs("/umbraco_client/Application/JQuery/jquery.validate.unobtrusive.min.js");
-
-    
+    HtmlHelper.ClientValidationEnabled = true;
+    HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
 }
-
-@* NOTE: This RenderJsHere code should be put on your main template page where the rest of your script tags are placed *@
-@Html.RenderJsHere()
-
 
     @using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin", null, new { @class = "form-inline" }))
     {
@@ -35,8 +26,10 @@
                 
                 @Html.TextBoxFor(m => loginModel.Username, new { @class = "form-control input-sm", id = "LoingUsername", placeholder = ".col-xs-2" })
                 @Html.ValidationMessageFor(m => loginModel.Username)
+                @Html.ValidationMessageFor(m => loginModel.Username)
             
                 @Html.PasswordFor(m => loginModel.Password, new { type = "password", @class = "form-control input-sm", id = "LoingPassword", placeholder = ".col-xs-2" })
+                @Html.ValidationMessageFor(m => loginModel.Password)
                 @Html.ValidationMessageFor(m => loginModel.Password)
         </div>
         <button class="btn btn-default btn-sm">Login</button>

@@ -1,5 +1,20 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage 
 @{
     Layout = "Master.cshtml";
 }
 
+<div class="container">
+    <h1>@Umbraco.Field("PageTitle")</h1>
+
+    <p>@Umbraco.Field("PageContent")</p>
+
+
+    @if (TempData["success"] == null)
+    {
+        @Html.Action("Index", "ContactFormSurface")
+    }
+    else
+    {
+        <p>Thank you for contacting us. We’ll be in touch soon!</p>
+    }
+</div>

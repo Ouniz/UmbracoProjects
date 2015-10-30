@@ -4,6 +4,13 @@
 	
 }
 
-@Umbraco.Field("pagecontent")
-	
+<div class="container">
+    <div>
+        <h1>@Umbraco.Field("PageTitle")</h1>
+
+    </div>
+    <div>
+        <p>@Umbraco.Field("pagecontent")</p>
+    </div>
+</div>
 @CurrentPage.GetGridHtml("gridLayout")
