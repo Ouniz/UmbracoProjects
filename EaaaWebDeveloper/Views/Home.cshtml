@@ -5,8 +5,9 @@
 
 <div class="container">
     @{
+        var node = Umbraco.Content(1070);
 
-        foreach (var item in CurrentPage.Children.Where("Visible"))
+        foreach (var item in node.Children.Where("Visible"))
         {
 
             <div><h1>@item.PageTitle</h1></div>
